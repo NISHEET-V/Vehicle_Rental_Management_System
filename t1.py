@@ -75,18 +75,17 @@ class Bike(Vehicle):
                  Engine: {self.engine_capacity}cc""")
 
 
-if __name__ == "__main__":
-    fleet: list[Vehicle] = [
+fleet: list[Vehicle] = [
         Car("C101", "Tesla Model 3", 80.0, num_doors=4, luxury_fee=25.0),
         Car("C102", "Toyota Camry", 50.0, num_doors=4),
         Bike("B201", "Yamaha MT-07", 35.0, engine_capacity=689),
         Bike("B202", "Honda Rebel 500", 30.0, engine_capacity=471),
     ]
 
-    rental_days = 7
-    print(f"VEHICLE RENTAL FLEET REPORT ({rental_days} Days):\n")
+rental_days = 7
+print(f"VEHICLE RENTAL FLEET REPORT ({rental_days} Days):\n")
 
-    for vehicle in fleet:
-        vehicle.display_details()
-        cost = vehicle.calculate_rental_cost(rental_days)
-        print(f"Total Cost ({rental_days} days): ${cost:.2f}\n")
+for vehicle in fleet:
+    vehicle.display_details()
+    cost = vehicle.calculate_rental_cost(rental_days)
+    print(f"Total Cost ({rental_days} days): ${cost:.2f}\n")
